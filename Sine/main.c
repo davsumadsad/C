@@ -24,10 +24,14 @@ int angle = 0;
 
 int main(int argc, char** argv) {
 
-    
-    printf("%d\n", INT_MAX);
-    printf("%d", sine(-5));
-    
+    CORDIC(127);
+//    CORDIC(140);
+//    CORDIC(200);
+
+//    printf("%d\n", INT_MAX);
+//      printf("%d\n", sine(5));
+//      printf("%d\n", cosine(5));
+//      printf("%d\n", sine_table[5]);
     
     return (EXIT_SUCCESS);
 }

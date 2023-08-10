@@ -33,7 +33,7 @@ extern struct XY xy;
 extern struct XY_Prime xy_prime;
 
 
-
+int CORDIC(int angle);
 int sine(int angle);
 int cosine(int angle);
 
