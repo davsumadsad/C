@@ -24,7 +24,7 @@ int angle = 0;
 
 int main(int argc, char** argv) {
 
-    CORDIC(127);
+    CORDIC(0);
 //    CORDIC(140);
 //    CORDIC(200);
 
