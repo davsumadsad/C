@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "cmath": "c",
         "complex": "c",
-        "valarray": "c"
+        "valarray": "c",
+        "functional": "c"
     }
 }

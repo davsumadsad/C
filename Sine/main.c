@@ -20,18 +20,32 @@
  * 
  */
 
-int angle = 0;
+int angle = 12800;
+int xvect = 0;
+int yvect = 0;
+
+struct XY vectorz;
+
+int ang   = 0;
 
 int main(int argc, char** argv) {
 
-    CORDIC(0);
-//    CORDIC(140);
-//    CORDIC(200);
+// #ifdef Test_CORDIC_Sine
 
-//    printf("%d\n", INT_MAX);
-//      printf("%d\n", sine(5));
-//      printf("%d\n", cosine(5));
-//      printf("%d\n", sine_table[5]);
+
+vectorz = CORDIC(angle);
+
+printf("Sine of %d is %d \n"    , angle, vectorz.X);
+printf("Cosine of %d is %d\n"    , angle, vectorz.Y);
+// printf("TAN of %d is %d \n"    , angle, CORDIC(TAN, angle));
+// #endif
+
+
+printf("Tan of x:%d y:%d %d \n", xvect, yvect, CORDIC_aTan(xvect, yvect));
+// printf("Tan of x:2304 y:5120 %d \n", CORDIC_aTan(2304, 5120));
+// printf("Tan of x:36864 y:81920 %d \n", CORDIC_aTan(36864, 81920));
+
+
     
     return (EXIT_SUCCESS);
 }
