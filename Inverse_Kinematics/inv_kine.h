@@ -11,15 +11,15 @@
 #define Y 1
 #define Z 2
 
-extern int n[3];
-extern int o[3];
-extern int a[3];
-extern int p[3];
+extern float n[3];
+extern float o[3];
+extern float a[3];
+extern float p[3];
 
 
-int theta1(int px, int py);
-int theta2(int nx, int ny, int nz, int theta1_x, int theta1_y);
-int theta3(int px, int py, int pz);
+int theta1(float px, float py);
+int theta2(float nx, float ny, float nz, float theta1_x, float theta1_y);
+int theta3(float px, float py, float pz, float theta1_x, float theta1_y);
 
 
 

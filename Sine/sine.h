@@ -20,19 +20,21 @@
 
 #define MX_Iterte 15
 
+#define SHIFT 10
+#define CONV 1024
+
 struct XY{
-    int X;
-    int Y;
+    int X_fx;
+    int Y_fx;
 };
 
-struct XY_Prime{
-    int X_Prime;
-    int Y_Prime;
+struct XY_flt{
+    float X_flt;
+    float Y_flt;
 };
 
 extern int sine_table[256];
 extern struct XY xy;
-extern struct XY_Prime xy_prime;
 
 extern int inv_tan;
 extern int rot_angle;
@@ -47,9 +49,12 @@ struct XY CORDIC(int angle);
 int    CORDIC_aTan(int x_comp, int y_comp);
 int    sine(int angle);
 int    cosine(int angle);
-float  conv_fp(int angle);
-int    conv_fx(float angle);
+float  conv_ang_fp(int angle);
+int    conv_ang_fx(float angle);
 
+
+struct XY_flt conv_vect_fp(struct XY vctrs);
+struct XY     conv_vect_fx(struct XY_flt vctrs);
 
 #ifdef __cplusplus
 extern "C" {

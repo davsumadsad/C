@@ -26,8 +26,9 @@ int yvect = 0;
 
 struct XY vectorz;
 
+
 int ang   = 0;
-float deg = 50;
+float deg = 90;
 int main(int argc, char** argv) {
 
 // #ifdef Test_CORDIC_Sine
@@ -35,22 +36,22 @@ int main(int argc, char** argv) {
 
 printf("Angle in degrees Floating: %f \n", deg);
 
-ang = conv_fx(deg);
+ang = conv_ang_fx(deg);
 printf("Angle in degrees Fixed   : %d \n", ang);
 
 vectorz = CORDIC(ang);
 
-printf("Sine of %d is %d \n"    , angle, vectorz.X);
-printf("Cosine of %d is %d\n"    , angle, vectorz.Y);
+printf("Sine of %d is %d \n"    , angle, vectorz.X_fx);
+printf("Cosine of %d is %d\n"    , angle, vectorz.Y_fx);
 // printf("TAN of %d is %d \n"    , angle, CORDIC(TAN, angle));
 // #endif
 
-ang = CORDIC_aTan(vectorz.X, vectorz.Y);
+ang = CORDIC_aTan(-3, 255);
 
-printf("Tan of x:%d y:%d %d \n", vectorz.X, vectorz.Y, ang);
-printf("Fixed Point angle: %d in floating point is %f \n\n", ang, conv_fp(ang));
+printf("Tan of x:%d y:%d %d \n", vectorz.X_fx, vectorz.Y_fx, ang);
+printf("Fixed Point angle: %d in floating point is %f \n\n", ang, conv_ang_fp(ang));
 
-
+printf("%d",SHIFT);
     
     return (EXIT_SUCCESS);
 }
