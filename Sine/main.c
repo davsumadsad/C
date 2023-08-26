@@ -27,13 +27,18 @@ int yvect = 0;
 struct XY vectorz;
 
 int ang   = 0;
-
+float deg = 50;
 int main(int argc, char** argv) {
 
 // #ifdef Test_CORDIC_Sine
 
 
-vectorz = CORDIC(angle);
+printf("Angle in degrees Floating: %f \n", deg);
+
+ang = conv_fx(deg);
+printf("Angle in degrees Fixed   : %d \n", ang);
+
+vectorz = CORDIC(ang);
 
 printf("Sine of %d is %d \n"    , angle, vectorz.X);
 printf("Cosine of %d is %d\n"    , angle, vectorz.Y);

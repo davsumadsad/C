@@ -48,6 +48,7 @@ int    CORDIC_aTan(int x_comp, int y_comp);
 int    sine(int angle);
 int    cosine(int angle);
 float  conv_fp(int angle);
+int    conv_fx(float angle);
 
 
 #ifdef __cplusplus

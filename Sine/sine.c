@@ -138,6 +138,9 @@ float  conv_fp(int angle){
     return (float) angle / (1<<8);
 }
 
+int    conv_fx(float angle){
+    return ((int) angle) << 8;
+}
 
 
 int sine(int angle){
@@ -189,16 +192,14 @@ int cosine(int angle){
 /*
 * Change log
 *
-*
-*  Rev      By                Date           Comments
-*  0.01     David Sumadsad    06Aug2023      -Initial build
-*  0.02     David Sumadsad    15Aug2023      -Fully functioning CORDIC function
-*  0.03     David Sumadsad    25Aug2023      -Added a Fixed point to floating point
-*                                             converter function
-*
-*
-*
-*
+
+  Rev      By                Date           Comments
+  0.01     David Sumadsad    06Aug2023      -Initial build
+  0.02     David Sumadsad    15Aug2023      -Fully functioning CORDIC function
+  0.03     David Sumadsad    25Aug2023      -Added a... 
+                                              -Angled Fixed point to floating point
+                                              -Floating Point (Deg) point to fixed point
+
 */
 
 
