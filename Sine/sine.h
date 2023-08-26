@@ -44,10 +44,10 @@ extern int y[50];
 
 
 struct XY CORDIC(int angle);
-int CORDIC_aTan(int x_comp, int y_comp);
-int sine(int angle);
-int cosine(int angle);
-
+int    CORDIC_aTan(int x_comp, int y_comp);
+int    sine(int angle);
+int    cosine(int angle);
+float  conv_fp(int angle);
 
 
 #ifdef __cplusplus
