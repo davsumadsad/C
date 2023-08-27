@@ -18,7 +18,7 @@ extern float p[3];
 
 
 int theta1(float px, float py);
-int theta2(float nx, float ny, float nz, float theta1_x, float theta1_y);
+int theta2(float nx, float ny, float nz, float theta1_x, float theta1_y, int theta3);
 int theta3(float px, float py, float pz, float theta1_x, float theta1_y);
 
 

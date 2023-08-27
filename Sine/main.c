@@ -28,7 +28,7 @@ struct XY vectorz;
 
 
 int ang   = 0;
-float deg = 90;
+float deg = 85;
 int main(int argc, char** argv) {
 
 // #ifdef Test_CORDIC_Sine
@@ -46,6 +46,7 @@ printf("Cosine of %d is %d\n"    , angle, vectorz.Y_fx);
 // printf("TAN of %d is %d \n"    , angle, CORDIC(TAN, angle));
 // #endif
 
+//ang = CORDIC_aTan(vectorz.X_fx, vectorz.Y_fx);
 ang = CORDIC_aTan(-3, 255);
 
 printf("Tan of x:%d y:%d %d \n", vectorz.X_fx, vectorz.Y_fx, ang);
